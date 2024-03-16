@@ -1,35 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { SayHello } from "./SayHello";
+import { Tweet } from "./Tweet";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <SayHello />
+      <div className="tweet-container">
+        <Tweet name="Kylian" content="Le football il a changé" like="971"/>
+        <Tweet name="Mike" content="It's a kind of magic !" like="237" />
+        <Tweet name="Ousmane" content="Désolé pour le retard coach" like="238" />
+        <Tweet name="Antoine" content="Sur chaque action, c'est caca-culotte" like="489" />
+        <Tweet name="Olivier" content="Only god can judge me" like="669" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
-export default App
+export default App;
